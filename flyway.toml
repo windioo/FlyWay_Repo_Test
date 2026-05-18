@@ -1,0 +1,33 @@
+databaseType = "PostgreSql"
+id = "88b39571-24b5-48e5-9ed4-14e5f1994fcc"
+name = "Belajar_FlyWay"
+
+[flyway]
+callbackLocations = [ "filesystem:callbacks" ]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+[flywayDesktop]
+enableMigrations = true
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+  [flywayDesktop.generate]
+  undoScripts = false
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.behavior]
+detectRenames = "identical-only"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments.target1]
+url = "jdbc:postgresql://192.168.1.246:5544/postgres"
+user = "postgres"
+schemas = [ "public" ]
