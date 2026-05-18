@@ -28,6 +28,6 @@ detectRenames = "identical-only"
 ignoreNewlinesInTextObjects = "off"
 
 [environments.target1]
-url = "jdbc:postgresql://192.168.1.246:5544/postgres"
+url = "jdbc:postgresql://192.168.1.246:5544/belajar_flyway"
 user = "postgres"
 schemas = [ "public" ]
